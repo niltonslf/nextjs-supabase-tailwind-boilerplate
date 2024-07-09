@@ -6,7 +6,7 @@ export const useAuth = () => {
     supabase.auth.signInWithOAuth({
       provider: 'google',
       options: {
-        redirectTo: `${APP_URL}/auth/callback`,
+        redirectTo: `${APP_URL}/login/callback`,
       },
     })
   }

@@ -1,13 +1,12 @@
-import {MiddlewareConfig, NextRequest} from 'next/server'
-
-import {updateAuthSession} from '@/server/middlewares/update-auth-session.middleware'
-import {verifyAuthSession} from '@/server/middlewares/verify-auth-sesion.middleware'
+import {MiddlewareConfig, NextRequest, NextResponse} from 'next/server'
 
 export async function middleware(request: NextRequest) {
-  let response = await updateAuthSession(request)
-  response = await verifyAuthSession(request, response)
+  // let response = await updateAuthSession(request)
+  // response = await verifyAuthSession(request, response)
 
-  return response
+  // return response
+
+  return NextResponse.next()
 }
 
 export const config: MiddlewareConfig = {
